@@ -29,6 +29,7 @@ github_username:  jekyll
 
 # Build settings
 remote_theme: jekyll/minima
+markdown: kramdown
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
