@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part I: M-ary Digital Modulation Schemes"
+title:  "Part I: Representing M-ary Digital Modulation as Constellation Points"
 date:   2025-04-11 14:41:00 +0100
 categories: wireless communication
 ---
