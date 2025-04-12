@@ -87,6 +87,9 @@ The points $$\mathbf{s}_1$$ and $$\mathbf{s}_2$$ can be represented in a simple 
     <img src="/blog/assets/images/BPSK_points.png" alt="BPSK points" style="width: 40%;">
 </div>
 
+### From PSK to QAM
+
+
 # References
 [1] An Introduction to Digital and Analog Communications, Simon Haykin, 2nd Edition, 2001.
 
