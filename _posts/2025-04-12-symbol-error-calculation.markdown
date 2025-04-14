@@ -8,9 +8,7 @@ categories: wireless communication
 
 ### Generalized Symbol Error Probability Calculation
 
-### Approximate Symbol Error Probability
-
-### Consequences of the Approximation
+### Asymptotic Symbol Error Probability
 
 ### Constellation Shaping
 

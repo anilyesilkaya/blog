@@ -17,9 +17,9 @@ Consider the transmission of information consisting of a binary sequence with a 
 ### Mapping of Digitally Modulated Waveforms Onto Constellations of Signal Points
 Starting with $$M$$-ary PSK due to its simplicity, the available phase $$2\pi$$ radians are portioned equally and in a discrete way among $$M$$ transmitted signals as follows:
 
-$$s_i(t) = \sqrt{\frac{2E}{T}}\cos(2\pi f_c t + \frac{2\pi}{M}i)$$
+$$s_i(t) = \sqrt{\frac{2E}{T}}\cos\left(2\pi f_c t + \frac{2\pi}{M}(i-1)\right)$$
 
-where $$i=0,1,\cdots,M-1$$ and $$ 0 \leq t \leq T $$. The parameter $$E$$ is the signal energy per symbol and $$f_c$$ is the carrier frequency.
+where $$i=1,\cdots,M$$ and $$ 0 \leq t \leq T $$. The parameter $$E$$ is the signal energy per symbol and $$f_c$$ is the carrier frequency.
 
 The idea of signal-space diagrams has profound importance in statistical information theory since it provides a mathematical basis for the *geometrical representation of energy signals*, exemplified by digitally modulated waveforms. For a specific method of digital modulation, the geometric representation appears as constellation points in the signal space diagram, which is unique to that method. For instance, BPSK shows how two waveforms $$s_1(t)$$ and $$s_2(t)$$ representing the binary symbols $$1$$ and $$0$$ respectively, are mapped onto the *transmitted signal points* as follows:
 
