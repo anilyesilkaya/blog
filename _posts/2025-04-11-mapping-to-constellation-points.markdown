@@ -33,7 +33,7 @@ $$\begin{aligned} s_1(t) &= \sqrt{\frac{2E_b}{T_b}}\cos(2\pi f_c t), ~~~\quad\qu
 #### How is the mapping accomplished?
 The answer lies within the concept of *the correlator*. The definition of the modulated waves for the BPSK modulation is given above. The signal-space representation of BPSK modulation involves a single basis function:
 
-$$\phi_1(t) \sqrt{\frac{2}{T_b}}\cos(2\pi f_c t)$$
+$$\phi_1(t) = \sqrt{\frac{2}{T_b}}\cos(2\pi f_c t)$$
 
 The two signaling waveforms $$s_1(t)$$ and $$s_2(t)$$ are correlated with the basis function $$\phi_1(t)$$, over the time interval $$0\leq t \leq T_b$$. This is the same problem as designing a coherent BPSK receiver that can extract the information content from the transmitted signal,
 
