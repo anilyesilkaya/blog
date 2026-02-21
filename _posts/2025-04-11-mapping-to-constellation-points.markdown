@@ -89,6 +89,7 @@ The points $$\mathbf{s}_1$$ and $$\mathbf{s}_2$$ can be represented in a simple 
 
 #### How Did We Select the Correlator?
 
+#### Pi/2-BPSK
 
 ### Extending PSK to QAM
 
