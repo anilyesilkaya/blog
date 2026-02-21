@@ -2,7 +2,7 @@
 layout: post
 title:  "Part I: Representing M-ary Digital Modulation as Constellation Points"
 date:   2025-04-11 14:41:00 +0100
-categories: wireless communication
+categories: wireless communication, information theory
 ---
 In M-ary digital modulation, we transmit one of $$M$$ possible signals, $$s_1(t),s_2(t),\cdots,s_M(t)$$, during each symbol interval of duration $$T$$. Typically, $$M$$ equals $$2^m$$, where $$m$$ is the number of bits per symbol. This makes the symbol duration $$T = m\cdot T_b$$, where $$T_b$$ is the bit duration.
 
