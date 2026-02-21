@@ -87,7 +87,9 @@ The points $$\mathbf{s}_1$$ and $$\mathbf{s}_2$$ can be represented in a simple 
     <img src="/blog/assets/images/BPSK_points.png" alt="BPSK points" style="width: 40%;">
 </div>
 #### How did we select the correlator?
-### Extenying PSK to QAM
+
+
+### Extending PSK to QAM
 
 
 # References
