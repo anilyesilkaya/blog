@@ -2,8 +2,8 @@
 layout: post
 title: "AI/ML Basics: What Is Softmax and Why Do We Need It?"
 date: 2026-02-24 17:54:10 +0000
-categories: [programming, deep-learning]
-tags: [neural-networks, machine-learning, softmax, activation-functions]
+categories: [machine-learning, deep-learning]
+tags: [neural-networks, softmax, activation-functions]
 ---
 
 # Why Do We Need the Softmax Function?
