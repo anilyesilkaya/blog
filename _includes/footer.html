@@ -1,0 +1,14 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: #94a3b8; margin-top: 1em;">
+          &copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
