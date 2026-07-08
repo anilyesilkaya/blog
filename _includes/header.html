@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    {%- assign default_paths = site.pages | where: "title" | map: "title" -%}
+    {%- assign default_paths = site.pages | where_exp: "item", "item.title" | map: "title" -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if default_paths.size > 0 -%}

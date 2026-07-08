@@ -1,6 +1,8 @@
 ---
 ---
 
+$content-width: 1100px;
+
 @import "minima";
 
 // ============================================================
@@ -42,17 +44,72 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.3em;
 }
 
-// -- Grid dot background on site header --
+// -- Site header (light blueprint / graph-paper aesthetic) --
 .site-header {
-  border-top: 3px solid var(--accent);
-  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
+  position: relative;
+  border-top: none;
+  border-bottom: none;
+  background-color: #fafcff;
+  background-image:
+    radial-gradient(ellipse 800px 260px at 12% 0%, rgba(14, 165, 233, 0.10), transparent 65%),
+    radial-gradient(ellipse 600px 240px at 88% 100%, rgba(139, 92, 246, 0.06), transparent 65%),
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  min-height: 3.4rem;
 
-.site-title {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(to right, transparent 5%, rgba(14, 165, 233, 0.5) 50%, transparent 95%);
+    pointer-events: none;
+  }
+
+  .site-title,
+  .site-title:visited {
+    color: #0f172a;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+
+    &::before {
+      content: "~ $ ";
+      color: var(--accent);
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  }
+
+  .site-nav {
+    background: transparent;
+    border: none;
+
+    .page-link,
+    .page-link:visited {
+      color: #475569;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      transition: color 0.15s;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration: none;
+      }
+    }
+
+    .menu-icon > svg {
+      fill: #475569;
+    }
+  }
 }
 
 // -- Reading time & post meta --
@@ -253,6 +310,16 @@ pre {
   h3 {
     margin: 0.2em 0 0.4em;
     font-size: 1.1rem;
+  }
+
+  .post-link {
+    color: #0f172a;
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--accent);
+    }
   }
 
   .post-excerpt {
