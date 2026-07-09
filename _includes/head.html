@@ -7,4 +7,14 @@
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   {%- feed_meta -%}
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (_) {}
+    })();
+  </script>
 </head>

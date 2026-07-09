@@ -25,15 +25,18 @@ $\rhd$ Knowing how to count these type of things is critical for an understandin
 **Frequentist vs Bayesian approaches:** Note that we assuming frequentist approach throughout this book meaning that after the experiments/trials based on our initial assumption (i.e. probability of heads occuring is 0.5) is not going to be updated by using the data, which is the Bayesian approach. Here, in order to understand basics of the probability we are assuming we are using frequentist approach.
 
 # Factorials
-Before getting into the discussion of actual combinatorics and related concepts we first need to look at a certain quantity that comes up very frequently. This quantity is called the <u>_factorial_</u>.
+Before getting into the discussion of actual combinatorics and related concepts we first need to look at a certain quantity that comes up very frequently. This quantity is called the <u>factorial</u>.
 
-- Throughout this book when dealing with a situation that involves an intger value $N$, we often need to consider the product of the first $N$ integers:
+Throughout this book when dealing with a situation that involves an intger value $N$, we often need to consider the product of the first $N$ integers:
+
 $$
 \begin{equation}
 N! = N\times (N-1) \times (N-2) \cdots 1
 \end{equation}
 $$
+
 For the few integers we have:
+
 $$
 \begin{align}
 \begin{split}
@@ -47,7 +50,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 From above expression we can see some pattern, however, there are also some elements doesn't make as much sense. For instance,
+
 $$
 \begin{align}
 \begin{split}
@@ -56,9 +61,11 @@ $$
 \end{split}
 \end{align}
 $$
+
 why both $0!$ and $1!$ are equal to 1? From [2], we can see the following pattern,
 
 $\rhd$ For $5!$, we need to multiply 5 integers,
+
 $$
 \begin{align*}
 5! &= \underbrace{1 \times 2 \times 3 \times 4 \times 5}_{\text{multiply 5 consecutive integers}}
@@ -66,6 +73,7 @@ $$
 $$
 
 $\rhd$ For $4!$, we need to multiply 4 integers,
+
 $$
 \begin{align*}
 4! &= \underbrace{1 \times 2 \times 3 \times 4}_{\text{multiply 4 consecutive integers}}
@@ -73,6 +81,7 @@ $$
 $$
 
 $\rhd$ For $3!$, we need to multiply 3 integers,
+
 $$
 \begin{align*}
 3! &= \underbrace{1 \times 2 \times 3}_{\text{multiply 3 consecutive integers}}
@@ -80,6 +89,7 @@ $$
 $$
 
 $\rhd$ For $2!$, we need to multiply 2 integers,
+
 $$
 \begin{align*}
 2! &= \underbrace{1 \times 2}_{\text{multiply 2 consecutive integers}}
@@ -87,6 +97,7 @@ $$
 $$
 
 $\rhd$ For $1!$, we need to multiply 1 integer,
+
 $$
 \begin{align*}
 1! &= \underbrace{1}_{\text{ multiply 1 consecutive integers}}
@@ -94,14 +105,17 @@ $$
 $$
 
 $\rhd$ For $0!$, we need to multiply 0 integer,
+
 $$
 \begin{align*}
-0! &= \underbrace{}_{\text{multiply 0 consecutive integers}}
+0! &= \underbrace{\phantom{1 \times 2 \times 3}}_{\text{multiply 0 consecutive integers}}
 \end{align*}
 $$
+
 How are we meant to multiple 0 integer?
 
 Let's look at other operations such as exponentiation
+
 $$
 \begin{align}
 \begin{split}
@@ -110,12 +124,13 @@ $$
 3^3 &= \underbrace{3 \times 3 \times 3}_{\text{3 times}} = 27 \\
 3^2 &= \underbrace{3 \times 3}_{\text{2 times}} = 9 \\
 3^1 &= \underbrace{3}_{\text{1 times}} = 3 \\
-3^0 &= \underbrace{}_{\text{0 times}} = (?) \\
+3^0 &= \underbrace{\phantom{3 \times 3}}_{\text{0 times}} = (?) \\
 \end{split}
 \end{align}
 $$
 
 How about if we look at the multiplication operation?
+
 $$
 \begin{align}
 \begin{split}
@@ -124,29 +139,30 @@ $$
 3\times 3 &= \underbrace{3 + 3 + 3}_{\text{3 times}} = 9 \\
 3\times 2 &= \underbrace{3 + 3}_{\text{2 times}} = 6 \\
 3\times 1 &= \underbrace{3}_{\text{1 times}} = 3 \\
-3\times 0 &= \underbrace{}_{\text{0 times}} = (?) \\
+3\times 0 &= \underbrace{\phantom{3 + 3}}_{\text{0 times}} = (?) \\
 \end{split}
 \end{align}
 $$
 
-> $$~$$
-> ⚠️ **Important**
->
->  Because of the agreed definition/convention summing an integer 0 times has been defined as 0.
->
-> $$\boxed{3 \times 0 = \underbrace{\vphantom{3 + 3}}_{\text{sum 3 zero times}} = 0}$$
->
-> Similarly, because of an agreed definition/convention for multplying an integer 0 times has been defined as 1.
->
-> $$\boxed{3^0 = \underbrace{\vphantom{3 \times 3}}_{\text{multiply 3 zero times}} = 1}$$
->
-> As a direct consequence of the above expression, the identity/natural element of the exponentiation operation becomes,
-> $$\boxed{0! = \underbrace{\;}_{\text{multiply zero consecutive integers}} = 1}$$
->
-> More generally, if an operation has an <u>identity element</u><sup>*</sup>, operating that specific operation on 0 integers is accepted **by convention** to yield that identity element.
->
-> [ ]<sup>*</sup>: Identity/Natural element Is an element that leaves unchanged every element when the operation is applied.
-> $$~$$
+<div class="callout callout-warn" markdown="1">
+**Important**
+
+Because of the agreed definition/convention summing an integer 0 times has been defined as 0.
+
+$$\boxed{3 \times 0 = \underbrace{\vphantom{3 + 3}}_{\text{sum 3 zero times}} = 0}$$
+
+Similarly, because of an agreed definition/convention for multplying an integer 0 times has been defined as 1.
+
+$$\boxed{3^0 = \underbrace{\vphantom{3 \times 3}}_{\text{multiply 3 zero times}} = 1}$$
+
+As a direct consequence of the above expression, the identity/natural element of the exponentiation operation becomes,
+
+$$\boxed{0! = \underbrace{\;}_{\text{multiply zero consecutive integers}} = 1}$$
+
+More generally, if an operation has an <u>identity element</u><sup>*</sup>, operating that specific operation on 0 integers is accepted **by convention** to yield that identity element.
+
+<sup>*</sup> Identity/Natural element is an element that leaves unchanged every element when the operation is applied.
+</div>
 
 # Permutations
 

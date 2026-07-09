@@ -20,8 +20,38 @@
             <a class="page-link" href="{{ path.url | relative_url }}">{{ path.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-toggle-label">theme</span>
+          </button>
         </div>
       </nav>
     {%- endif -%}
   </div>
 </header>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var root = document.documentElement;
+
+    function currentTheme() {
+      var explicit = root.getAttribute('data-theme');
+      if (explicit) return explicit;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function label() {
+      btn.textContent = currentTheme() === 'dark' ? '☀ light' : '☽ dark';
+    }
+
+    label();
+
+    btn.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (_) {}
+      label();
+    });
+  })();
+</script>
