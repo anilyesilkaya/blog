@@ -313,7 +313,7 @@ div.highlighter-rouge {
     content: attr(data-lang);
     position: absolute;
     top: 8px;
-    right: 60px; // keep clear of the copy button
+    right: 80px; // keep clear of the fixed-width copy button
     font-family: var(--font-mono);
     font-size: 0.65rem;
     letter-spacing: 0.08em;
@@ -692,8 +692,10 @@ hr {
   border: 1px solid #45475a;
   border-radius: 3px;
   cursor: pointer;
-  transition: all 0.2s;
-  z-index: 1;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2; // stay above the language ribbon
+  min-width: 60px;
+  text-align: center;
 
   &:hover {
     background: #45475a;

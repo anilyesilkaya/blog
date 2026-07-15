@@ -225,6 +225,12 @@ legend({'$N!$','$\Delta(N!)$'},"Interpreter","latex","Location","northwest")
 ```
 {% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth.png" alt="N! growth with the Δ(N!)" %}
 
+It is quite interesting to observe two interesting phenomena from the above plot:
+
+1. The rate of growth of the is very large for instance $5! = 120$, $10! = 3,628,800$, and $20!=2.4329e+18$.
+
+2. Also, we can observe from the above figure that for very large $N$, $\Delta(N!) \approx N! \approx 10^N$. More precisely, we can fit a better line to the plot as $N! \approx (24!-12!)/(24-12)N + n$, where $24!=6.2045e+23$, $12!=479001600$ also let's use an intermediate point to find $n$, $18!=6.4024e+15$. Thus, $6.4024e+15 = (5.1704e+22)\times 18 + n$. Thus, $n=-9.3067e+23$.
+
 
 # Permutations
 
