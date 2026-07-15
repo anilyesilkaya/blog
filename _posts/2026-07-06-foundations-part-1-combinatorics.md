@@ -62,7 +62,38 @@ $$
 \end{align}
 $$
 
-why both $0!$ and $1!$ are equal to 1? From [2], we can see the following pattern,
+why both $0!$ and $1!$ are equal to 1? 
+
+<div class="callout callout-warn" markdown="1">
+**Why the common proof for the 0!=1 is not valid?**
+
+Generally, in some sources the $0! = 1$ is proven by using the following logic:
+
+$$
+\begin{align}
+\begin{split}
+&\text{The expression}\enspace 0! = 1 \enspace\text{because,}\enspace n! = n\cdot (n-1)! \\
+&\text{If we take}\enspace n = 1,\enspace \text{then,}\enspace 1! = 1\cdot 0!\\
+&\text{Thus,}\enspace 0! = 1
+\end{split}
+\end{align}
+$$
+However, above expression is invalid [3]. Why?
+In order for $0! = 1$ expression to be meaningful both sides of this equality must be meaningful.
+$$
+\begin{align}
+\begin{split}
+&\text{If we take}\enspace n = 1,\enspace \text{then,}\enspace 1! = 1\cdot 0!\\
+&\text{Here, the right hand side of the equality is undefined since,} \\
+& 0! = \text{undefined}
+\end{split}
+\end{align}
+$$
+Consequently, we can infer that the equality $0!=1$ is not valid for the $n=1$ case.
+
+</div>
+
+Let's take an alternative approach. From [2], we can see the following pattern,
 
 $\rhd$ For $5!$, we need to multiply 5 integers,
 
@@ -147,7 +178,7 @@ $$
 <div class="callout callout-warn" markdown="1">
 **Important**
 
-Because of the agreed definition/convention summing an integer 0 times has been defined as 0.
+Because of the agreed definition/convention summing an integer 0 times has been defined as 0 [2].
 
 $$\boxed{3 \times 0 = \underbrace{\vphantom{3 + 3}}_{\text{sum 3 zero times}} = 0}$$
 
@@ -159,10 +190,12 @@ As a direct consequence of the above expression, the identity/natural element of
 
 $$\boxed{0! = \underbrace{\;}_{\text{multiply zero consecutive integers}} = 1}$$
 
-More generally, if an operation has an <u>identity element</u><sup>*</sup>, operating that specific operation on 0 integers is accepted **by convention** to yield that identity element.
+More generally, if an operation has an <u>identity element</u><sup>⋆</sup>, operating that specific operation on 0 integers is accepted **by convention** to yield that identity element.
 
-<sup>*</sup> Identity/Natural element is an element that leaves unchanged every element when the operation is applied.
+<sup>⋆</sup> Identity/Natural element is an element that leaves unchanged every element when the operation is applied.
 </div>
+
+It is also important to note that as $N$ increases $N!$ gets large very fast
 
 # Permutations
 
@@ -172,4 +205,6 @@ More generally, if an operation has an <u>identity element</u><sup>*</sup>, oper
 # References
 [1] Morin, David J. Probability: For the Enthusiastic Beginner. CreateSpace Independent Publishing Platform, 2016.
 
-[2] Ali Nesin - 0! (Sıfır Faktöriyel) Neden 1'e Eşittir? (Why zero factorial 0! equals to zero?) URL: [https://youtu.be/i5gxEhNDYls?si=DQIWMxDdY2-MzJK8](https://youtu.be/i5gxEhNDYls?si=DQIWMxDdY2-MzJK8) (Accessed: 08/07/2026)
+[2] Ali Nesin, 0! (Sıfır Faktöriyel) Neden 1'e Eşittir? (Why zero factorial 0! equals to zero?) URL: [https://youtu.be/i5gxEhNDYls?si=DQIWMxDdY2-MzJK8](https://youtu.be/i5gxEhNDYls?si=DQIWMxDdY2-MzJK8) (Accessed: 08-07-2026)
+
+[3] Ali Nesin, 0!=1'in Önerilen Kanıtları Neden Yanlış  (Why is the proposed solutions for 0!=1 are wrong?)[https://youtu.be/T97dGFB7dww?si=u9IYBCfF-vtZEz-v] (Accessed: 15-07-2026)
