@@ -31,7 +31,15 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Tag highlighted blocks with a language name for the ribbon.
+      document.querySelectorAll('div.highlighter-rouge, figure.highlight').forEach(function(wrap) {
+        var m = (wrap.className.match(/language-([\w+-]+)/) || [])[1] || '';
+        if (m && m !== 'plaintext') wrap.setAttribute('data-lang', m);
+      });
+
+      // Add a copy button to code blocks, skipping paired output panels.
       document.querySelectorAll('pre').forEach(function(pre) {
+        if (pre.closest('.code-output')) return;
         var btn = document.createElement('button');
         btn.className = 'copy-btn';
         btn.textContent = 'copy';

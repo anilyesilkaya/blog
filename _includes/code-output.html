@@ -1,0 +1,22 @@
+{%- comment -%}
+  Paired output panel for a preceding fenced code block.
+  Usage:
+    ```matlab
+    ...
+    ```
+    {% include code-output.html src="/blog/assets/images/foo.png" alt="plot" %}
+
+  Or for text output:
+    {% include code-output.html text=">> answer = 42" %}
+{%- endcomment -%}
+<div class="code-output">
+  {%- if include.src -%}
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: 'output' }}">
+  {%- endif -%}
+  {%- if include.text -%}
+    <pre><code>{{ include.text | escape }}</code></pre>
+  {%- endif -%}
+  {%- if include.content -%}
+    {{ include.content }}
+  {%- endif -%}
+</div>

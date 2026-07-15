@@ -302,6 +302,111 @@ pre {
   }
 }
 
+// -- Language ribbon on highlighted code blocks --
+// Kramdown wraps ``` fenced code in `.language-<lang> .highlighter-rouge`.
+// We surface the language name in the top-right corner of the pre block.
+figure.highlight,
+div.highlighter-rouge {
+  position: relative;
+
+  &::after {
+    content: attr(data-lang);
+    position: absolute;
+    top: 8px;
+    right: 60px; // keep clear of the copy button
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a6adc8;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.15em 0.55em;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  // If the block declares no language, hide the ribbon
+  &[data-lang=""]::after,
+  &:not([data-lang])::after {
+    display: none;
+  }
+}
+
+// -- Paired code / output panels --
+// Usage in Markdown:
+//   ```matlab
+//   x = 1:10;
+//   plot(x, x.^2)
+//   ```
+//   {: .with-output }
+//
+//   <div class="code-output" markdown="1">
+//   ![result](/blog/assets/images/foo.png)
+//   </div>
+//
+// Or use the include: {% include code-output.html src="..." %}
+.code-output {
+  position: relative;
+  background: var(--surface-soft);
+  color: var(--text-body);
+  border: 1px solid var(--border-subtle);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  margin: -1.2em 0 1.5em; // sit flush against the preceding <pre>
+  padding: 1em 1.2em;
+  font-size: 0.88rem;
+  line-height: 1.55;
+
+  &::before {
+    content: "output";
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.6em;
+  }
+
+  pre,
+  code {
+    background: transparent !important;
+    color: var(--text-body) !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+  pre::before { display: none; } // no traffic-light dots on output
+  pre { overflow-x: auto; }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0.4em auto;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  > :first-child { margin-top: 0; }
+  > :last-child  { margin-bottom: 0; }
+}
+
+// When a code block is followed by a code-output panel, drop its bottom
+// rounding so the two blocks read as one unit.
+.with-output + .code-output,
+.highlighter-rouge.with-output {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.highlighter-rouge.with-output pre {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
 // Inline code
 :not(pre) > code {
   background: var(--inline-code-bg);
