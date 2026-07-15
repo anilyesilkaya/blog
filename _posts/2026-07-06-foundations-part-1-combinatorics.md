@@ -197,6 +197,35 @@ More generally, if an operation has an <u>identity element</u><sup>⋆</sup>, op
 
 It is also important to note that as $N$ increases $N!$ gets large very fast
 
+```matlab
+N = 0:20;
+factorialVec = zeros(size(N));
+dFactorialVec = NaN(size(N));
+
+% Factorial values
+for i = 1:length(N)
+    n = N(i);
+    factorialVec(i) = factorial(n);
+end
+
+% Finite difference values
+for j = 2:length(N)-1
+    % Forward difference: (f[x+1] - f[x]) / ((x+1) - x) =  f[x+1] - f[x]
+    dFactorialVec(j) = factorialVec(j+1) - factorialVec(j);
+end
+
+figure;
+semilogy(N,factorialVec,'o','MarkerSize',6)
+hold on
+semilogy(N,dFactorialVec,'*','MarkerSize',7)
+hold off
+grid on
+xlabel('$N$',"Interpreter","latex")
+legend({'$N!$','$\Delta(N!)$'},"Interpreter","latex","Location","northwest")
+```
+{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth.png" alt="N! growth with the Δ(N!)" %}
+
+
 # Permutations
 
 
