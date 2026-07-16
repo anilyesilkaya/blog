@@ -286,7 +286,7 @@ $$
 (A)
 $$
 
-{% include svg-figure.html file="svg/foundations-part-1/one_object.svg" caption="Fig. 1:  Ordering one object" %}
+{% include svg-figure.html file="svg/2026-07-06-foundations-part-1-combinatorics/one_object.svg" caption="Fig. 1:  Ordering one object" %}
 
 ## Two Objects
 When we have two object $A$ and $B$ we can order them in 2 different ways,$P_2=2$:
@@ -295,7 +295,7 @@ $$
 (A,B),~(B,A)
 $$
 
-{% include svg-figure.html file="svg/foundations-part-1/two_objects.svg" caption="Fig. 2:  Ordering two objects" %}
+{% include svg-figure.html file="svg/2026-07-06-foundations-part-1-combinatorics/two_objects.svg" caption="Fig. 2:  Ordering two objects" %}
 
 ## Three Objects
 ## Four Objects
