@@ -286,10 +286,17 @@ $$
 (A)
 $$
 
-{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/one_object.svg" alt="Ordering one object." caption="Fig. 1 Number of permutations for one object." %}
+{% include figure.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/one_object.svg" alt="Ordering one object." caption="Fig. 1 Number of permutations for one object." %}
 
 ## Two Objects
+When we have two object $A$ and $B$ we can order them in 2 different ways,$P_2=2$:
 
+$$
+(A,B)
+(B,A)
+$$
+
+{% include figure.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/two_objects.svg" alt="Ordering two objects." caption="Fig. 1 Number of permutations for two objects." %}
 
 ## Three Objects
 ## Four Objects
