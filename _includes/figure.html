@@ -1,0 +1,16 @@
+{%- comment -%}
+  Standalone captioned figure.
+  Usage:
+    {% include figure.html src="/assets/images/foo.png"
+                           alt="alt text"
+                           caption="Fig. 4.2 Geometry of a heat transfer fin"
+                           width="80%" %}
+{%- endcomment -%}
+<figure class="post-figure">
+  <img src="{{ include.src | relative_url }}"
+       alt="{{ include.alt | default: 'figure' }}"
+       {% if include.width %}style="width: {{ include.width }};"{% endif %}>
+  {%- if include.caption -%}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif -%}
+</figure>
