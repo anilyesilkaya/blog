@@ -259,8 +259,7 @@ legend({'$N!$','$\Delta(N!)$','$e^N$','$10^N$'},"Interpreter","latex","Location"
 ```
 {% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth_2.png" alt="N! and Δ(N!) compared to e^N and 10^N" %}
 
-Therefore, we can see that for $N$ values of  $7 \leq N \leq 20$, 
-Note that the expression above is a very crude approaximation and doesn't hold outside the specified interval.
+As we can see from the above figure that the permutation is increasing very rapidly, in fact $N!$ grows faster than much faster than $e^N$ also even faster than $10^N$.
 
 # Permutations
 Now we have a very basic understanding of how counting and numbers are working, we can focus on calculating number of ways things are happenning. More specifically, a <u>permutation</u> of a set of objects is a way of ordering them.
@@ -268,6 +267,7 @@ Now we have a very basic understanding of how counting and numbers are working, 
 For example, if we have three people; Alice (A),  Bob (B), and Carol (C), then some permutations are $(\mathrm{A}-\mathrm{B}-\mathrm{C})$, $(\mathrm{A}-\mathrm{C}-\mathrm{B})$, $(\mathrm{C}-\mathrm{A}-\mathrm{B})$ etc.
 
 It turns out that there are six permutations in total:
+
 $$
 \begin{split}
 &(\mathrm{A}-\mathrm{B}-\mathrm{C}),~(\mathrm{A}-\mathrm{C}-\mathrm{B}) \\
@@ -280,20 +280,17 @@ Let's now investigate how can we order different number of objects to get some i
 
 ## One Object
 
-For a single object, there is only one way to arrange it — the trivial case.
+For a single object, there is only one way to arrange it, $P_1=1$.
+
 $$
 (A)
 $$
 
-{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/one_object.png" alt="Ordering one object." %}
-
-The single possible arrangement is $(\mathrm{A})$, so the count of permutations for $N=1$ is
-
-$$
-P_1 = 1! = 1.
-$$
+{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/one_object.svg" alt="Ordering one object." caption="Fig. 1 Number of permutations for one object." %}
 
 ## Two Objects
+
+
 ## Three Objects
 ## Four Objects
 
