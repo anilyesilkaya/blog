@@ -225,7 +225,7 @@ legend({'$N!$','$\Delta(N!)$'},"Interpreter","latex","Location","northwest")
 ```
 {% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth.png" alt="N! growth with the Δ(N!)" %}
 
-As we can see from the above figure that the $N!$ increases almost exponentially with $N$, where $5!=120$, $10!=3,628,800$, and $20!=2.4329e+18$, if we superimpose exponential functions on the current figure we will have:
+As we can see from the above figure that the $N!$ increases almost exponentially with $N$, where $5!=120$, $10!=3,628,800$, and $20!=2.4329e+18$, if we superimpose $10^N$ and $e^N$ exponential functions on the current figure we will have:
 ```matlab
 N = 0:20;
 factorialVec = zeros(size(N));
@@ -269,43 +269,23 @@ For example, if we have three people; Alice (A),  Bob (B), and Carol (C), then s
 
 It turns out that there are six permutations in total:
 $$
-\begin{align}
 \begin{split}
 &(\mathrm{A}-\mathrm{B}-\mathrm{C}),~(\mathrm{A}-\mathrm{C}-\mathrm{B}) \\
 &(\mathrm{B}-\mathrm{A}-\mathrm{C}),~(\mathrm{B}-\mathrm{C}-\mathrm{A}) \\
 &(\mathrm{C}-\mathrm{A}-\mathrm{B}),~(\mathrm{C}-\mathrm{B}-\mathrm{A})
 \end{split}
-\end{align}
 $$
 
 Let's now investigate how can we order different number of objects to get some insights about how many total possibilities appear, and how to generalize the calculation to count them.
 
 ## One Object
 
-For a single object, there is only one way to arrange it — the trivial base case.
+For a single object, there is only one way to arrange it — the trivial case.
+$$
+(A)
+$$
 
-<div style="display:flex; justify-content:center; margin:1.5em 0;">
-<svg viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg" role="img"
-     aria-label="A single object labelled A has exactly one arrangement."
-     style="max-width:420px; width:100%; height:auto;">
-  <text x="60" y="22" text-anchor="middle"
-        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;">objects</text>
-  <circle cx="60" cy="65" r="24" style="fill:var(--accent);"/>
-  <text x="60" y="71" text-anchor="middle"
-        style="fill:#fff; font-family:var(--font-mono); font-weight:700; font-size:16px;">A</text>
-
-  <text x="170" y="72" text-anchor="middle"
-        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:22px;">&#8594;</text>
-
-  <text x="270" y="22" text-anchor="middle"
-        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;">arrangement</text>
-  <rect x="240" y="40" width="60" height="50" rx="4"
-        style="fill:none; stroke:var(--border-subtle); stroke-width:1.5; stroke-dasharray:4 3;"/>
-  <circle cx="270" cy="65" r="18" style="fill:var(--accent);"/>
-  <text x="270" y="71" text-anchor="middle"
-        style="fill:#fff; font-family:var(--font-mono); font-weight:700; font-size:14px;">A</text>
-</svg>
-</div>
+{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/one_object.png" alt="Ordering one object." %}
 
 The single possible arrangement is $(\mathrm{A})$, so the count of permutations for $N=1$ is
 
