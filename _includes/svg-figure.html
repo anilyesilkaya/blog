@@ -1,0 +1,14 @@
+{%- comment -%}
+  Inline-SVG captioned figure. Inlining preserves currentColor / theme
+  inheritance (which is lost when SVG is loaded via <img>).
+
+  Save the SVG under _includes/svg/, then:
+    {% include svg-figure.html file="svg/object_on_surface.svg"
+                               caption="Object O1 on a surface" %}
+{%- endcomment -%}
+<figure class="post-figure post-figure--svg">
+  {%- include {{ include.file }} -%}
+  {%- if include.caption -%}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif -%}
+</figure>
