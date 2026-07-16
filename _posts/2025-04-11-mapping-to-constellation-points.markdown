@@ -30,7 +30,7 @@ $$\begin{aligned} s_1(t) &= \sqrt{\frac{2E_b}{T_b}}\cos(2\pi f_c t), ~~~\quad\qu
 {% include figure.html
      src="/assets/images/BPSK_waves.png"
      alt="BPSK waveforms"
-     caption="Fig. 2 Orthogonal BPSK waveforms: cosine basis (left) and negative cosine basis (right)"
+     caption="Fig. 1 Orthogonal BPSK waveforms: cosine basis (left) and negative cosine basis (right)"
      width="100%" %}
 
 #### How is the mapping accomplished?
