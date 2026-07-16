@@ -27,9 +27,14 @@ The idea of signal-space diagrams has profound importance in statistical informa
 $$\begin{aligned} s_1(t) &= \sqrt{\frac{2E_b}{T_b}}\cos(2\pi f_c t), ~~~\quad\quad \text{for bit 1} \\
                 s_2(t) &= \sqrt{\frac{2E_b}{T_b}}\cos(2\pi f_c t + \pi), \quad \text{for bit 0} \end{aligned}$$
 
-<div style="text-align: center;">
+{% include figure.html
+     src="/assets/images/BPSK_waves.png"
+     alt="BPSK waveforms"
+     caption="Orthogonal BPSK waveforms: cosine basis (left) and sine basis (right)"
+     width="100%" %}
+<!-- <div style="text-align: center;">
     <img src="/blog/assets/images/BPSK_waves.png" alt="BPSK waveforms" style="width: 100%;">
-</div>
+</div> -->
 
 #### How is the mapping accomplished?
 The answer lies within the concept of *the correlator*. The definition of the modulated waves for the BPSK modulation is given above. The signal-space representation of BPSK modulation involves a single basis function:
@@ -84,9 +89,14 @@ $$\begin{aligned} \mathbf{s}_2 &= \int_{0}^{T_b} \frac{2\sqrt{E_b}}{T_b}\cos(2\p
 
 The points $$\mathbf{s}_1$$ and $$\mathbf{s}_2$$ can be represented in a simple plot:
 
-<div style="text-align: left;">
+{% include figure.html
+     src="/assets/images/BPSK_points.png"
+     alt="BPSK constellation points"
+     caption="Fig. 2 Discrete BPSK constellation points corresponding to the orthogonal basis functions"
+     width="40%" %}
+<!-- <div style="text-align: left;">
     <img src="/blog/assets/images/BPSK_points.png" alt="BPSK points" style="width: 40%;">
-</div>
+</div> -->
 
 #### How Did We Select the Correlator?
 

@@ -225,15 +225,97 @@ legend({'$N!$','$\Delta(N!)$'},"Interpreter","latex","Location","northwest")
 ```
 {% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth.png" alt="N! growth with the Δ(N!)" %}
 
-It is quite interesting to observe two interesting phenomena from the above plot:
+As we can see from the above figure that the $N!$ increases almost exponentially with $N$, where $5!=120$, $10!=3,628,800$, and $20!=2.4329e+18$, if we superimpose exponential functions on the current figure we will have:
+```matlab
+N = 0:20;
+factorialVec = zeros(size(N));
+dFactorialVec = NaN(size(N));
 
-1. The rate of growth of the is very large for instance $5! = 120$, $10! = 3,628,800$, and $20!=2.4329e+18$.
+% Factorial values
+for i = 1:length(N)
+    n = N(i);
+    factorialVec(i) = factorial(n);
+end
 
-2. Also, we can observe from the above figure that for very large $N$, $\Delta(N!) \approx N! \approx 10^N$. More precisely, we can fit a better line to the plot as $N! \approx (24!-12!)/(24-12)N + n$, where $24!=6.2045e+23$, $12!=479001600$ also let's use an intermediate point to find $n$, $18!=6.4024e+15$. Thus, $6.4024e+15 = (5.1704e+22)\times 18 + n$. Thus, $n=-9.3067e+23$.
+% Finite difference values
+for j = 2:length(N)-1
+    % Forward difference: (f[x+1] - f[x]) / ((x+1) - x) =  f[x+1] - f[x]
+    dFactorialVec(j) = factorialVec(j+1) - factorialVec(j);
+end
 
+% Various functions for comparison
+expFunction = @(x,k) x.^k;
+
+figure;
+semilogy(N,factorialVec,'o','MarkerSize',6)
+hold on
+semilogy(N,dFactorialVec,'*','MarkerSize',7)
+semilogy(N,expFunction(exp(1),N),'-')
+semilogy(N,expFunction(10,N),'-')
+hold off
+grid on
+xlabel('$N$',"Interpreter","latex")
+legend({'$N!$','$\Delta(N!)$','$e^N$','$10^N$'},"Interpreter","latex","Location","northwest")
+```
+{% include code-output.html src="/assets/images/2026-07-06-foundations-part-1-combinatorics/factorial_growth_2.png" alt="N! and Δ(N!) compared to e^N and 10^N" %}
+
+Therefore, we can see that for $N$ values of  $7 \leq N \leq 20$, 
+Note that the expression above is a very crude approaximation and doesn't hold outside the specified interval.
 
 # Permutations
+Now we have a very basic understanding of how counting and numbers are working, we can focus on calculating number of ways things are happenning. More specifically, a <u>permutation</u> of a set of objects is a way of ordering them.
 
+For example, if we have three people; Alice (A),  Bob (B), and Carol (C), then some permutations are $(\mathrm{A}-\mathrm{B}-\mathrm{C})$, $(\mathrm{A}-\mathrm{C}-\mathrm{B})$, $(\mathrm{C}-\mathrm{A}-\mathrm{B})$ etc.
+
+It turns out that there are six permutations in total:
+$$
+\begin{align}
+\begin{split}
+&(\mathrm{A}-\mathrm{B}-\mathrm{C}),~(\mathrm{A}-\mathrm{C}-\mathrm{B}) \\
+&(\mathrm{B}-\mathrm{A}-\mathrm{C}),~(\mathrm{B}-\mathrm{C}-\mathrm{A}) \\
+&(\mathrm{C}-\mathrm{A}-\mathrm{B}),~(\mathrm{C}-\mathrm{B}-\mathrm{A})
+\end{split}
+\end{align}
+$$
+
+Let's now investigate how can we order different number of objects to get some insights about how many total possibilities appear, and how to generalize the calculation to count them.
+
+## One Object
+
+For a single object, there is only one way to arrange it — the trivial base case.
+
+<div style="display:flex; justify-content:center; margin:1.5em 0;">
+<svg viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="A single object labelled A has exactly one arrangement."
+     style="max-width:420px; width:100%; height:auto;">
+  <text x="60" y="22" text-anchor="middle"
+        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;">objects</text>
+  <circle cx="60" cy="65" r="24" style="fill:var(--accent);"/>
+  <text x="60" y="71" text-anchor="middle"
+        style="fill:#fff; font-family:var(--font-mono); font-weight:700; font-size:16px;">A</text>
+
+  <text x="170" y="72" text-anchor="middle"
+        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:22px;">&#8594;</text>
+
+  <text x="270" y="22" text-anchor="middle"
+        style="fill:var(--text-muted); font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase;">arrangement</text>
+  <rect x="240" y="40" width="60" height="50" rx="4"
+        style="fill:none; stroke:var(--border-subtle); stroke-width:1.5; stroke-dasharray:4 3;"/>
+  <circle cx="270" cy="65" r="18" style="fill:var(--accent);"/>
+  <text x="270" y="71" text-anchor="middle"
+        style="fill:#fff; font-family:var(--font-mono); font-weight:700; font-size:14px;">A</text>
+</svg>
+</div>
+
+The single possible arrangement is $(\mathrm{A})$, so the count of permutations for $N=1$ is
+
+$$
+P_1 = 1! = 1.
+$$
+
+## Two Objects
+## Three Objects
+## Four Objects
 
 # Combinations
 
