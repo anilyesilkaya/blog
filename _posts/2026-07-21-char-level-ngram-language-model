@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Character-Level N-gram Language Models: Generating Turkish Names"
+date:   2026-07-21 10:30:00 +0000
+categories: [nlp, language-models]
+tags: [n-gram, bigram, trigram, mle, markov, pytorch]
+---
