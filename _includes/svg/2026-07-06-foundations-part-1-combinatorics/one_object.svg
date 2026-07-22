@@ -1,42 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 184"
-     width="396" height="184" role="img"
-     aria-label="One object O1 resting on a surface"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 140"
+     width="396" height="140" role="img"
+     aria-label="One object A resting on a surface"
      style="max-width:100%;height:auto;color:currentColor;">
-  <!-- Object O1 -->
-  <g>
-    <ellipse cx="200" cy="80" rx="80" ry="80"
-             fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
-    <text x="200" y="88" text-anchor="middle"
-          font-family="Helvetica, sans-serif" font-size="40"
-          font-weight="700" fill="currentColor">A</text>
-  </g>
 
-  <!-- Surface line (theme-aware) -->
-  <path d="M 10 160 L 390 160"
+  <!-- Object A -->
+  <ellipse cx="200" cy="60" rx="60" ry="60"
+           fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+  <text x="200" y="66" text-anchor="middle" dominant-baseline="middle"
+        font-family="Helvetica, sans-serif" font-size="32"
+        font-weight="700" fill="currentColor">A</text>
+
+  <!-- Surface line -->
+  <path d="M 10 120 L 390 120"
         fill="none" stroke="currentColor" stroke-width="6"
         stroke-linecap="round"/>
 
-  <!-- Surface hatching (theme-aware) -->
+  <!-- Surface hatching -->
   <g fill="none" stroke="currentColor" stroke-width="2"
      stroke-dasharray="6 6">
-    <path d="M 0 180 L 20 160"/>
-    <path d="M 20 180 L 40 160"/>
-    <path d="M 40 180 L 60 160"/>
-    <path d="M 60 180 L 80 160"/>
-    <path d="M 80 180 L 100 160"/>
-    <path d="M 100 180 L 120 160"/>
-    <path d="M 120 180 L 140 160"/>
-    <path d="M 140 180 L 160 160"/>
-    <path d="M 160 180 L 180 160"/>
-    <path d="M 180 180 L 200 160"/>
-    <path d="M 200 180 L 220 160"/>
-    <path d="M 220 180 L 240 160"/>
-    <path d="M 240 180 L 260 160"/>
-    <path d="M 260 180 L 280 160"/>
-    <path d="M 280 180 L 300 160"/>
-    <path d="M 300 180 L 320 160"/>
-    <path d="M 320 180 L 340 160"/>
-    <path d="M 340 180 L 360 160"/>
-    <path d="M 360 180 L 380 160"/>
+    <path d="M 0 140 L 20 120"/>   <path d="M 20 140 L 40 120"/>
+    <path d="M 40 140 L 60 120"/>  <path d="M 60 140 L 80 120"/>
+    <path d="M 80 140 L 100 120"/> <path d="M 100 140 L 120 120"/>
+    <path d="M 120 140 L 140 120"/><path d="M 140 140 L 160 120"/>
+    <path d="M 160 140 L 180 120"/><path d="M 180 140 L 200 120"/>
+    <path d="M 200 140 L 220 120"/><path d="M 220 140 L 240 120"/>
+    <path d="M 240 140 L 260 120"/><path d="M 260 140 L 280 120"/>
+    <path d="M 280 140 L 300 120"/><path d="M 300 140 L 320 120"/>
+    <path d="M 320 140 L 340 120"/><path d="M 340 140 L 360 120"/>
+    <path d="M 360 140 L 380 120"/>
   </g>
 </svg>
